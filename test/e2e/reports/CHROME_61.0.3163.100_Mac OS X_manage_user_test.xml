@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="4">
+
+  <testsuite name="manage_user_test"
+    errors="0" failures="0" hostname="" id="" package="manage_user_test" skipped="0"
+    tests="4" time="17.80" timestamp="Thu, 12 Oct 2017 13:20:43 GMT">
+  
+    <testcase name="test manage user page" classname="manage_user_test" time="6.355" assertions="14">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="test to login with new credentials" classname="manage_user_test" time="2.610" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="reset test account password and username" classname="manage_user_test" time="6.299" assertions="14">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="login with test user original credentials" classname="manage_user_test" time="2.541" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

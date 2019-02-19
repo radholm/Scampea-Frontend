@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/store.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> store.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Vue from 'vue'
+import Vuex from 'vuex'
+import axios from 'axios'
+import createPersistedState from 'vuex-persistedstate'
+&nbsp;
+import router from './router'
+&nbsp;
+// Centralized app data
+Vue.use(Vuex)
+&nbsp;
+// Auth request interceptor
+// Adds token to the request if it exists
+axios.interceptors.request.use(config =&gt; <span class="fstat-no" title="function not covered" >{</span>
+  const token = <span class="cstat-no" title="statement not covered" >store.getters.getAccessToken</span>
+<span class="cstat-no" title="statement not covered" >  if (token) <span class="cstat-no" title="statement not covered" >config.headers['Authorization'] = `Bearer ${token}`</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return config</span>
+})
+&nbsp;
+// Auth error interceptor
+axios.interceptors.response.use(null, (error) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+  const { status } = <span class="cstat-no" title="statement not covered" >error.response</span>
+<span class="cstat-no" title="statement not covered" >  console.log(error.response)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  switch (status) {</span>
+    case 401: {
+<span class="cstat-no" title="statement not covered" >      store.dispatch('logout') </span>// Remove access token and user info if there is any
+<span class="cstat-no" title="statement not covered" >      router.push('/login')</span>
+<span class="cstat-no" title="statement not covered" >      break</span>
+    }
+    case 403: {
+<span class="cstat-no" title="statement not covered" >      alert('You must be an admin to access this page...') </span>// TODO: Change this
+<span class="cstat-no" title="statement not covered" >      router.push('/')</span>
+<span class="cstat-no" title="statement not covered" >      break</span>
+    }
+    case 500: {
+<span class="cstat-no" title="statement not covered" >      alert('Server error')</span>
+<span class="cstat-no" title="statement not covered" >      break</span>
+    }
+    case 504: {
+<span class="cstat-no" title="statement not covered" >      alert('Unable to reach server')</span>
+<span class="cstat-no" title="statement not covered" >      break</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return Promise.reject(error)</span>
+})
+&nbsp;
+const store = new Vuex.Store({
+  state: {
+    accessToken: null,
+    user: null,
+    login: { errors: {} },
+    projects: [],
+    project: null,
+    news: [],
+    timelogs: [],
+    employees: [],
+    projectUsers: []
+  },
+  getters: {
+    getAccessToken: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.accessToken,</span></span>
+    getLoginStatus: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.user !== null,</span></span>
+    getLoginErrors: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.login.errors,</span></span>
+    getPermission: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.user ? state.user.permission : 0,</span></span>
+    getUser: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.user || {},</span></span>
+    getUserPicture: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.user ? state.user.picture : '',</span></span>
+    getUserProjects: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.projects,</span></span>
+    getProject: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.project,</span></span>
+    getUserNews: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.news,</span></span>
+    getUserTimeLogs: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.timelogs,</span></span>
+    getEmployees: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.employees,</span></span>
+    getProjectEmployees: state =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >state.projectUsers</span></span>
+  },
+  mutations: {
+    removeAccessToken (state) {
+<span class="cstat-no" title="statement not covered" >      state.accessToken = ''</span>
+    },
+    removeUserInfo (state) {
+<span class="cstat-no" title="statement not covered" >      state.user = null</span>
+    },
+    setDefaultState (state) {
+<span class="cstat-no" title="statement not covered" >      Object.assign(state, {</span>
+        accessToken: null,
+        user: null,
+        login: { errors: {} },
+        projects: [],
+        project: null,
+        news: [],
+        timelogs: [],
+        employees: []
+      })
+    },
+    addLoginErrors (state, errors) {
+<span class="cstat-no" title="statement not covered" >      if (typeof errors === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >        state.login.errors = { error: errors }</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        state.login.errors = errors</span>
+      }
+    },
+    removeLoginErrors (state) {
+<span class="cstat-no" title="statement not covered" >      state.login.errors = ''</span>
+    },
+    addAccessToken (state, accessToken) {
+<span class="cstat-no" title="statement not covered" >      state.accessToken = accessToken</span>
+    },
+    addUserInfo (state, userInfo) {
+<span class="cstat-no" title="statement not covered" >      state.user = userInfo</span>
+    },
+    addProjects (state, projects) {
+<span class="cstat-no" title="statement not covered" >      state.projects = projects</span>
+    },
+    addProject (state, project) {
+<span class="cstat-no" title="statement not covered" >      state.project = project</span>
+    },
+    addNews (state, news) {
+<span class="cstat-no" title="statement not covered" >      state.news = news</span>
+    },
+    addTimelogs (state, timelogs) {
+<span class="cstat-no" title="statement not covered" >      state.timelogs = timelogs</span>
+    },
+    addEmployees (state, employees) {
+<span class="cstat-no" title="statement not covered" >      state.employees = employees</span>
+    },
+    addProjectUsers (state, users) {
+<span class="cstat-no" title="statement not covered" >      state.projectUsers = users</span>
+    }
+  },
+  actions: {
+    async login ({ commit, dispatch }, { username, password }) {
+<span class="cstat-no" title="statement not covered" >      try {</span>
+        const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+          url: '/oauth/token',
+          method: 'POST',
+          data: {
+            grant_type: 'password',
+            client_id: process.env.OAUTH_CONFIG.client_id,
+            client_secret: process.env.OAUTH_CONFIG.client_secret,
+            username,
+            password
+          }
+        })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        commit('removeLoginErrors') </span>// Remove any login errors
+<span class="cstat-no" title="statement not covered" >        commit('addAccessToken', res.data.access_token) </span>// Add access token to store
+<span class="cstat-no" title="statement not covered" >        dispatch('fetchUserInfo')</span>
+      } catch (e) {
+<span class="cstat-no" title="statement not covered" >        console.error(e)</span>
+<span class="cstat-no" title="statement not covered" >        commit('addLoginErrors', e.response.data.message)</span>
+      }
+    },
+    async fetchUserInfo ({ commit, state }, token) {
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: '/api/user',
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addUserInfo', res.data)</span>
+&nbsp;
+      // Redirect user to index
+<span class="cstat-no" title="statement not covered" >      router.push('/')</span>
+    },
+    async fetchUserNews ({ commit, state }) {
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: '/api/news',
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addNews', res.data)</span>
+    },
+    async fetchProjectUsers ({ commit, state }, projectId) {
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: `/api/project/${projectId}/users`,
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addProjectUsers', res.data)</span>
+    },
+    async fetchUserProjects ({ commit, state }) {
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: '/api/projects',
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addProjects', res.data)</span>
+    },
+    async fetchProject ({ commit, state }, id) {
+<span class="cstat-no" title="statement not covered" >      console.log(id)</span>
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: '/api/project/' + id,
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addProject', res.data)</span>
+    },
+    async fetchUserLogTime ({ commit, state }) {
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: '/api/timelogs',
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addTimelogs', res.data)</span>
+    },
+    async fetchEmployees ({ commit, state }) {
+      const res = <span class="cstat-no" title="statement not covered" >await axios({</span>
+        url: '/api/users',
+        method: 'GET'
+      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      commit('addEmployees', res.data)</span>
+    },
+    logout ({ commit }) {
+<span class="cstat-no" title="statement not covered" >      commit('removeAccessToken')</span>
+<span class="cstat-no" title="statement not covered" >      commit('removeUserInfo')</span>
+<span class="cstat-no" title="statement not covered" >      commit('setDefaultState')</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      router.push('/login')</span>
+    }
+  },
+  plugins: [createPersistedState()]
+})
+&nbsp;
+export default store
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 03 2017 12:49:11 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

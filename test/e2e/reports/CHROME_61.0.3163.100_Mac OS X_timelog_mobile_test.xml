@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="timelog_mobile_test"
+    errors="0" failures="0" hostname="" id="" package="timelog_mobile_test" skipped="0"
+    tests="1" time="6.159" timestamp="Thu, 12 Oct 2017 13:21:37 GMT">
+  
+    <testcase name="test create timelog" classname="timelog_mobile_test" time="6.159" assertions="15">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

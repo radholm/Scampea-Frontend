@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="employees_test"
+    errors="0" failures="0" hostname="" id="" package="employees_test" skipped="0"
+    tests="2" time="7.121" timestamp="Thu, 12 Oct 2017 13:20:18 GMT">
+  
+    <testcase name="test employee page as admin" classname="employees_test" time="3.687" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="test employee page as normal user" classname="employees_test" time="3.434" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
